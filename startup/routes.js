@@ -3,8 +3,8 @@ const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 
-const error = require('@middlewares/error');
-const apiRoutes = require('@routes/index');
+const error = require('../middlewares/error');
+const apiRoutes = require('../routes/index');
 
 module.exports = (app) => {
     const { ENVIRONMENT } = process.env;
