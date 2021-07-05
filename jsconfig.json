@@ -9,7 +9,8 @@
             "@middlewares/*": ["middlewares/*"],
             "@models/*": ["models/*"],
             "@startup/*": ["startup/*"],
-            "@config/*": ["config/*"]
+            "@config/*": ["config/*"],
+            "@utils/*": ["utils/*"]
         }
     },
     "exclude": ["node_modules"]
