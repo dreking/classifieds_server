@@ -6,7 +6,7 @@ const UserSchema = new Schema(
         lname: { type: String, required: true },
         email: { type: String, required: true },
         password: { type: String, required: true },
-        role: { type: String, required: true, enum: ['supplier', 'customer'] },
+        role: { type: String, required: true, enum: ['seller', 'customer'] },
     },
     { timestamps: true }
 );
