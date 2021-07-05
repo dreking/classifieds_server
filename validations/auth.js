@@ -42,3 +42,25 @@ exports.checkSignUp = [
         .isIn(['000000', '123456', '654321'])
         .withMessage('Password must not equal to 000000/123456/6543221'),
 ];
+
+exports.checkSignIn = [
+    body('email', 'Email is required')
+        .notEmpty()
+        .isString()
+        .bail()
+        .trim()
+        .normalizeEmail()
+        .isEmail()
+        .withMessage('Email is invalid')
+        .bail(),
+    body('password', 'Password is required')
+        .notEmpty()
+        .isString()
+        .bail()
+        .trim()
+        .isLength({ min: 6 })
+        .withMessage('Password must be at least 6 characters long')
+        .not()
+        .isIn(['000000', '123456', '654321'])
+        .withMessage('Password must not equal to 000000/123456/6543221'),
+];

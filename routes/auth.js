@@ -8,7 +8,14 @@ router.post(
     '/signup',
     validations.checkSignUp,
     validations.handleValidation,
-    authController.postCreateUser
+    authController.postSignUp
+);
+
+router.post(
+    '/signin',
+    validations.checkSignIn,
+    validations.handleValidation,
+    authController.postSignIn
 );
 
 module.exports = router;
