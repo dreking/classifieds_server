@@ -47,3 +47,7 @@ Example: refact: reduced code for checking for null values on array
 ```
 Example: feat&fix: added readme file, fixed typo in readme file
 ```
+
+# Postman Documentation
+
+-   Import this [postman link](https://www.getpostman.com/collections/d73cfd0e89998c9f24a8) for documentation
