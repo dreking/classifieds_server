@@ -9,3 +9,13 @@ exports.getAllProducts = async (req, res) => {
         products: products,
     });
 };
+
+exports.getCategories = (req, res) => {
+    const categories = require('../data/categories.json');
+
+    return res.status(200).json({
+        status: true,
+        message: 'Categories found',
+        categories: categories,
+    });
+};
