@@ -5,9 +5,9 @@ const multer = require('multer');
 const sellerController = require('../controllers/seller');
 const validations = require('../validations/seller');
 const authenticate = require('../middlewares/authenticate');
-const { storage, fileFilter } = require('../config/multer');
+const { storage } = require('../config/multer');
 
-const upload = multer({ storage: storage, fileFilter: fileFilter });
+const upload = multer({ storage: storage });
 
 router.post(
     '/products',
