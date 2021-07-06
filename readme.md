@@ -51,3 +51,7 @@ Example: feat&fix: added readme file, fixed typo in readme file
 # Postman Documentation
 
 -   Import this [postman link](https://www.getpostman.com/collections/d73cfd0e89998c9f24a8) for documentation
+
+# DB Diagram
+
+-   Checkout this [database diagram](https://dbdiagram.io/d/60e2d1460b1d8a6d3966f4eb) for a full DB picture
