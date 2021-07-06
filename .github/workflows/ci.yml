@@ -22,8 +22,9 @@ jobs:
             - name: Install dependencies
               run: npm ci
               env:
-                  NODE_AUTH_TOKEN: ${{secrets.ENVIRONMENT}}
-                  NODE_AUTH_TOKEN: ${{secrets.DEVELOPER}}
-                  NODE_AUTH_TOKEN: ${{secrets.PORT}}
-                  NODE_AUTH_TOKEN: ${{secrets.MONGODB_URI}}
-                  NODE_AUTH_TOKEN: ${{secrets.JWT_KEY}}
+                  ENVIRONMENT: ${{secrets.ENVIRONMENT}}
+                  DEVELOPER: ${{secrets.DEVELOPER}}
+                  PORT: ${{secrets.PORT}}
+                  MONGODB_URI: ${{secrets.MONGODB_URI}}
+                  JWT_KEY: ${{secrets.JWT_KEY}}
+            - run: npm run build --if-present
