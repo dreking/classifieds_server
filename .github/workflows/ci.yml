@@ -28,4 +28,11 @@ jobs:
                   MONGODB_URI: ${{secrets.MONGODB_URI}}
                   JWT_KEY: ${{secrets.JWT_KEY}}
             - run: npm run build --if-present
-            - run: npm test
+            - name: Testing
+                run: npm test
+                env:
+                  ENVIRONMENT: ${{secrets.ENVIRONMENT}}
+                  DEVELOPER: ${{secrets.DEVELOPER}}
+                  PORT: ${{secrets.PORT}}
+                  MONGODB_URI: ${{secrets.MONGODB_URI}}
+                  JWT_KEY: ${{secrets.JWT_KEY}}
