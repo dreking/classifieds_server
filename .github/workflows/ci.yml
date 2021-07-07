@@ -27,7 +27,7 @@ jobs:
                   PORT: ${{secrets.PORT}}
                   MONGODB_URI: ${{secrets.MONGODB_URI}}
                   JWT_KEY: ${{secrets.JWT_KEY}}
-            - name: Test
+            - name: Test all test cases
               run: npm run test --coverage
               env:
                   ENVIRONMENT: ${{secrets.ENVIRONMENT}}
