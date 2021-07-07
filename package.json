@@ -6,7 +6,10 @@
     "scripts": {
         "start": "node index.js",
         "start:dev": "nodemon index.js",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "jest"
+    },
+    "jest": {
+        "testEnvironment": "node"
     },
     "keywords": [],
     "author": "",
@@ -28,6 +31,8 @@
     },
     "devDependencies": {
         "eslint": "^7.30.0",
-        "nodemon": "^2.0.9"
+        "jest": "^27.0.6",
+        "nodemon": "^2.0.9",
+        "supertest": "^6.1.3"
     }
 }
