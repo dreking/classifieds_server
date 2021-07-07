@@ -8,7 +8,6 @@ on:
 
 jobs:
     build:
-        name:
         runs-on: ubuntu-latest
 
         strategy:
@@ -28,12 +27,11 @@ jobs:
                   PORT: ${{secrets.PORT}}
                   MONGODB_URI: ${{secrets.MONGODB_URI}}
                   JWT_KEY: ${{secrets.JWT_KEY}}
-            - run: npm run build --if-present
-            - name: Test
-              run: npm run test --coverage
-              env:
-                  ENVIRONMENT: ${{secrets.ENVIRONMENT}}
-                  DEVELOPER: ${{secrets.DEVELOPER}}
-                  PORT: ${{secrets.PORT}}
-                  MONGODB_URI: ${{secrets.MONGODB_URI}}
-                  JWT_KEY: ${{secrets.JWT_KEY}}
+            # - name: Test
+            #   run: npm run test --coverage
+            #   env:
+            #       ENVIRONMENT: ${{secrets.ENVIRONMENT}}
+            #       DEVELOPER: ${{secrets.DEVELOPER}}
+            #       PORT: ${{secrets.PORT}}
+            #       MONGODB_URI: ${{secrets.MONGODB_URI}}
+            #       JWT_KEY: ${{secrets.JWT_KEY}}
