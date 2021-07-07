@@ -31,7 +31,7 @@ jobs:
                   JWT_KEY: ${{secrets.JWT_KEY}}
             - run: npm run build --if-present
             - name: Test
-              run: npm test
+              run: npm run test
               env:
                   ENVIRONMENT: ${{secrets.ENVIRONMENT}}
                   DEVELOPER: ${{secrets.DEVELOPER}}
