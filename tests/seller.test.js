@@ -1,6 +1,16 @@
 require('dotenv').config();
 const request = require('supertest');
 const app = require('../app');
+const mongoose = require('mongoose');
+
+beforeAll(() => {
+    mongoose.set('useNewUrlParser', true);
+    mongoose.connect(process.env.MONGODB_URI);
+});
+
+afterAll(async () => {
+    await mongoose.connection.close();
+});
 
 test('Should login', async () => {
     await request(app)
